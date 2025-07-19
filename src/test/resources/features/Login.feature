@@ -21,7 +21,7 @@ Feature: OrangeHRM Login
       | username  | password |
       | not admin | 272562   |
 
-    
+
   Scenario: Verify the functionality when user clicks on forget password link
     Given user is on the OrangeHRM login page
     When user clicks on Forget your password button
