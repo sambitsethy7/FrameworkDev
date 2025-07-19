@@ -22,8 +22,7 @@ public class DriverFactory {
             options.addArguments("--disable-dev-shm-usage");
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(
-                    Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("implicitWait"))));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("implicitWait"))));
         }
         driver.get(ConfigReader.getProperty("url"));
         return driver;
