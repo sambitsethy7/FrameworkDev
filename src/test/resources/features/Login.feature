@@ -26,3 +26,19 @@ Feature: OrangeHRM Login
     Given user is on the OrangeHRM login page
     When user clicks on Forget your password button
     Then user redirects to reset password page
+
+
+  Scenario: Verify the components present in reset password page
+    Given user is on the OrangeHRM login page
+    When user clicks on Forget your password button
+    And user redirects to reset password page
+    Then user verifies the components present in reset password page
+
+
+  Scenario: Verify the broken links present in Login page
+    Given user is on the OrangeHRM login page
+    Then i verify all links present in login page
+
+  Scenario: Verify the broken images present in Login page
+    Given user is on the OrangeHRM login page
+    Then i verify all images present in login page

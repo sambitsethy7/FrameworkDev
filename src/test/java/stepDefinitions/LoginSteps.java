@@ -68,4 +68,19 @@ public class LoginSteps {
     public void userRedirectsToResetPasswordPage() throws Exception {
         loginPage.verifyRedirectionToResetPasswordPage();
     }
+
+    @Then("user verifies the components present in reset password page")
+    public void userVerifiesTheComponentsPresentInResetPasswordPage() throws Exception {
+        loginPage.verifyComponentsPresentInResetPasswordPage();
+    }
+
+    @Then("i verify all links present in login page")
+    public void iVerifyAllLinksPresentInLoginPage() throws Exception {
+        loginPage.verifyAllLinks();
+    }
+
+    @Then("i verify all images present in login page")
+    public void iVerifyAllImagesPresentInLoginPage() throws Exception {
+        loginPage.verifyAllImages();
+    }
 }
