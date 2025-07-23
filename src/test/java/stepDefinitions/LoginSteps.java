@@ -1,14 +1,12 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 import utilities.ConfigReader;
 import utilities.DriverFactory;
 
-@Slf4j
 public class LoginSteps {
     WebDriver driver;
     LoginPage loginPage;

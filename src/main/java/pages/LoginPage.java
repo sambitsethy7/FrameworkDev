@@ -40,7 +40,7 @@ public class LoginPage {
     }
 
     public void clickLogin() {
-        driver.findElement(loginButton).click();
+        driver.findElement(loginButton).submit();
     }
 
     public void verifyAllComponents() {

@@ -1,3 +1,4 @@
+pages\DashboardPage.class
 utilities\DriverFactory.class
 utilities\ReportGenerator.class
 pages\LoginPage.class
