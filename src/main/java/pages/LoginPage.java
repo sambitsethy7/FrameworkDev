@@ -120,7 +120,6 @@ public class LoginPage {
             } catch (Exception e) {
                 System.out.println(imgURl + " caused an exception: " + e.getMessage());
             }
-
         }
     }
 }
