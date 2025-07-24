@@ -6,7 +6,6 @@ Feature: OrangeHRM Login
     And user clicks the login button
     Then user should see the OrangeHRM dashboard
 
-
   Scenario: Verify login page components
     Given user is on the OrangeHRM login page
     Then verify all components present in login page

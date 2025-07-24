@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -14,6 +13,7 @@ import java.util.List;
 
 public class DashboardPage {
     WebDriver driver;
+    LoginPage loginPage;
 
     By userDropdown = By.xpath("//li[contains(@class,'dropdown')]");
     By userDropdownMenu = By.xpath("//ul[@class='oxd-dropdown-menu']");
@@ -21,6 +21,7 @@ public class DashboardPage {
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
+        this.loginPage = new LoginPage(driver);
     }
 
     public void verifyOptionsPresentInUserDropdown() throws Exception {
@@ -42,5 +43,13 @@ public class DashboardPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(logoutOption));
         driver.findElement(logoutOption).click();
+    }
+
+    public void verifyAllImages() throws Exception {
+        loginPage.verifyAllImages();
+    }
+
+    public void verifyAllLinks() throws Exception {
+        loginPage.verifyAllLinks();
     }
 }

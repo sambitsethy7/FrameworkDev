@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.TestRunner" time="128.513" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.TestRunner" time="167.823" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Users\asdf\.jdks\ms-17.0.15\bin"/>
-    <property name="sun.java.command" value="C:\Users\asdf\AppData\Local\Temp\surefire8819136314768426739\surefirebooter-20250723220616771_3.jar C:\Users\asdf\AppData\Local\Temp\surefire8819136314768426739 2025-07-23T22-06-16_443-jvmRun1 surefire-20250723220616771_1tmp surefire_0-20250723220616771_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\asdf\AppData\Local\Temp\surefire15576126805041245710\surefirebooter-20250724090712076_3.jar C:\Users\asdf\AppData\Local\Temp\surefire15576126805041245710 2025-07-24T09-07-11_750-jvmRun1 surefire-20250724090712076_1tmp surefire_0-20250724090712076_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\asdf\Desktop\FolderSAM\OrangeHRM_Automation_project\target\test-classes;C:\Users\asdf\Desktop\FolderSAM\OrangeHRM_Automation_project\target\classes;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\asdf\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\asdf\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\asdf\.m2\repository\com\google\guava\guava\33.2.0-jre\guava-33.2.0-jre.jar;C:\Users\asdf\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\asdf\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\asdf\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\asdf\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\asdf\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\asdf\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\asdf\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\asdf\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\asdf\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\asdf\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\asdf\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\asdf\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\asdf\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\asdf\.m2\repository\io\cucumber\cucumber-junit\7.15.0\cucumber-junit-7.15.0.jar;C:\Users\asdf\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\asdf\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\asdf\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\asdf\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\asdf\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\asdf\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\asdf\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\asdf\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\asdf\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\asdf\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\asdf\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\asdf\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\asdf\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\asdf\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\asdf\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\asdf\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\asdf\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\asdf\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\asdf\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\asdf\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\asdf\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\asdf\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\asdf\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\asdf\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\asdf\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\asdf\.m2\repository\net\masterthought\cucumber-reporting\5.9.0\cucumber-reporting-5.9.0.jar;C:\Users\asdf\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.3\jackson-databind-2.18.3.jar;C:\Users\asdf\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.3\jackson-annotations-2.18.3.jar;C:\Users\asdf\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.3\jackson-core-2.18.3.jar;C:\Users\asdf\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.3\jackson-datatype-jsr310-2.18.3.jar;C:\Users\asdf\.m2\repository\org\apache\velocity\velocity-engine-core\2.4.1\velocity-engine-core-2.4.1.jar;C:\Users\asdf\.m2\repository\joda-time\joda-time\2.13.1\joda-time-2.13.1.jar;C:\Users\asdf\.m2\repository\org\apache\commons\commons-configuration2\2.11.0\commons-configuration2-2.11.0.jar;C:\Users\asdf\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\asdf\.m2\repository\org\apache\commons\commons-text\1.13.0\commons-text-1.13.0.jar;C:\Users\asdf\.m2\repository\org\jsoup\jsoup\1.20.1\jsoup-1.20.1.jar;C:\Users\asdf\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20240325.1\owasp-java-html-sanitizer-20240325.1.jar;C:\Users\asdf\.m2\repository\com\googlecode\owasp-java-html-sanitizer\java8-shim\20240325.1\java8-shim-20240325.1.jar;C:\Users\asdf\.m2\repository\com\googlecode\owasp-java-html-sanitizer\java10-shim\20240325.1\java10-shim-20240325.1.jar;C:\Users\asdf\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.17\jcl-over-slf4j-2.0.17.jar;C:\Users\asdf\.m2\repository\org\apache\commons\commons-lang3\3.18.0\commons-lang3-3.18.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\asdf\AppData\Local\Temp\surefire8819136314768426739\surefirebooter-20250723220616771_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\asdf\AppData\Local\Temp\surefire15576126805041245710\surefirebooter-20250724090712076_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.15+6-LTS"/>
@@ -59,49 +59,38 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Verify the user is navigated to dashboard after entering valid credentials" classname="Dashboard which displays after login" time="17.627">
+  <testcase name="Verify the options present in user dropdown" classname="Dashboard which displays after login" time="19.659">
     <system-out><![CDATA[
-Scenario: Verify the user is navigated to dashboard after entering valid credentials # src/test/resources/features/Dashboard.feature:4
-  Given user is on the OrangeHRM login page                                          # stepDefinitions.LoginSteps.user_is_on_login_page()
-  And user enters username and password                                              # stepDefinitions.LoginSteps.user_enters_credentials()
-  When user clicks the login button                                                  # stepDefinitions.LoginSteps.user_clicks_login_button()
-  Then user should see the OrangeHRM dashboard                                       # stepDefinitions.LoginSteps.user_should_see_dashboard()
-]]></system-out>
-    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
-SLF4J(W): Defaulting to no-operation (NOP) logger implementation
-SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-Jul 23, 2025 10:06:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:06:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="Verify the options present in user dropdown" classname="Dashboard which displays after login" time="11.125">
-    <system-out><![CDATA[
-Scenario: Verify the options present in user dropdown # src/test/resources/features/Dashboard.feature:11
+Scenario: Verify the options present in user dropdown # src/test/resources/features/Dashboard.feature:9
+Browser launched for scenario: Verify the options present in user dropdown
   Given user is on the OrangeHRM login page           # stepDefinitions.LoginSteps.user_is_on_login_page()
   And user enters username and password               # stepDefinitions.LoginSteps.user_enters_credentials()
   When user clicks the login button                   # stepDefinitions.LoginSteps.user_clicks_login_button()
-  And user should see the OrangeHRM dashboard         # stepDefinitions.LoginSteps.user_should_see_dashboard()
+  Then user should see the OrangeHRM dashboard        # stepDefinitions.LoginSteps.user_should_see_dashboard()
 Dropdown options are incorrect[About
 Support
 Change Password
 Logout]
   Then verify the options present in user dropdown    # stepDefinitions.DashboardSteps.verifyTheOptionsPresentInUserDropdown()
+Browser closed after scenario: Verify the options present in user dropdown
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:06:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Jul 24, 2025 9:07:25 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:06:39 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:07:25 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="User logouts from application" classname="Dashboard which displays after login" time="11.825">
+  <testcase name="User logouts from application" classname="Dashboard which displays after login" time="14.184">
     <system-out><![CDATA[
-Scenario: User logouts from application            # src/test/resources/features/Dashboard.feature:18
+Scenario: User logouts from application            # src/test/resources/features/Dashboard.feature:12
+Browser launched for scenario: User logouts from application
   Given user is on the OrangeHRM login page        # stepDefinitions.LoginSteps.user_is_on_login_page()
   And user enters username and password            # stepDefinitions.LoginSteps.user_enters_credentials()
-  And user clicks the login button                 # stepDefinitions.LoginSteps.user_clicks_login_button()
-  And user should see the OrangeHRM dashboard      # stepDefinitions.LoginSteps.user_should_see_dashboard()
+  When user clicks the login button                # stepDefinitions.LoginSteps.user_clicks_login_button()
+  Then user should see the OrangeHRM dashboard     # stepDefinitions.LoginSteps.user_should_see_dashboard()
 Dropdown options are incorrect[About
 Support
 Change Password
@@ -109,112 +98,188 @@ Logout]
   When verify the options present in user dropdown # stepDefinitions.DashboardSteps.verifyTheOptionsPresentInUserDropdown()
   Then user clicks on logout option                # stepDefinitions.DashboardSteps.userClicksOnLogoutOption()
   And user is on the OrangeHRM login page          # stepDefinitions.LoginSteps.user_is_on_login_page()
+Browser closed after scenario: User logouts from application
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:06:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:07:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:06:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:07:38 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="Successful login with valid credentials" classname="OrangeHRM Login" time="34.414">
+  <testcase name="Verify the images present in dashboard page" classname="Dashboard which displays after login" time="27.924">
+    <system-out><![CDATA[
+Scenario: Verify the images present in dashboard page # src/test/resources/features/Dashboard.feature:17
+Browser launched for scenario: Verify the images present in dashboard page
+  Given user is on the OrangeHRM login page           # stepDefinitions.LoginSteps.user_is_on_login_page()
+  And user enters username and password               # stepDefinitions.LoginSteps.user_enters_credentials()
+  When user clicks the login button                   # stepDefinitions.LoginSteps.user_clicks_login_button()
+  Then user should see the OrangeHRM dashboard        # stepDefinitions.LoginSteps.user_should_see_dashboard()
+Total images: 11
+https://opensource-demo.orangehrmlive.com/web/index.php/admin/theme/image/clientLogo?v=1721393199309 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/images/orangehrm-logo.png?v=1721393199309 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/7 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/7 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/7 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/22 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/11 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/buzz/photo/9 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/9 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/97 is a valid image. Response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/101 is a valid image. Response code: 200
+  Then i verify all images present in dashboard page  # stepDefinitions.DashboardSteps.iVerifyAllImagesPresentInDashboardPage()
+Browser closed after scenario: Verify the images present in dashboard page
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 9:07:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 9:07:52 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="Verify the links present in dashboard page" classname="Dashboard which displays after login" time="31.414">
+    <system-out><![CDATA[
+Scenario: Verify the links present in dashboard page # src/test/resources/features/Dashboard.feature:20
+Browser launched for scenario: Verify the links present in dashboard page
+  Given user is on the OrangeHRM login page          # stepDefinitions.LoginSteps.user_is_on_login_page()
+  And user enters username and password              # stepDefinitions.LoginSteps.user_enters_credentials()
+  When user clicks the login button                  # stepDefinitions.LoginSteps.user_clicks_login_button()
+  Then user should see the OrangeHRM dashboard       # stepDefinitions.LoginSteps.user_should_see_dashboard()
+https://www.orangehrm.com/ is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewAdminModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPimModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/time/viewTimeModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewRecruitmentModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewMyDetails is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/performance/viewPerformanceModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/maintenance/viewMaintenanceModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewClaimModule is a valid link with response code: 200
+https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz is a valid link with response code: 200
+https://orangehrm.com/open-source/upgrade-to-advanced is a valid link with response code: 200
+http://www.orangehrm.com/ is a valid link with response code: 301
+  Then i verify all links present in dashboard page  # stepDefinitions.DashboardSteps.iVerifyAllLinksPresentInDashboardPage()
+Browser closed after scenario: Verify the links present in dashboard page
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 9:08:20 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 9:08:20 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="Successful login with valid credentials" classname="OrangeHRM Login" time="12.742">
     <system-out><![CDATA[
 Scenario: Successful login with valid credentials # src/test/resources/features/Login.feature:3
+Browser launched for scenario: Successful login with valid credentials
   Given user is on the OrangeHRM login page       # stepDefinitions.LoginSteps.user_is_on_login_page()
   When user enters username and password          # stepDefinitions.LoginSteps.user_enters_credentials()
   And user clicks the login button                # stepDefinitions.LoginSteps.user_clicks_login_button()
   Then user should see the OrangeHRM dashboard    # stepDefinitions.LoginSteps.user_should_see_dashboard()
+Browser closed after scenario: Successful login with valid credentials
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:07:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:08:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:07:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:08:52 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="Verify login page components" classname="OrangeHRM Login" time="7.435">
+  <testcase name="Verify login page components" classname="OrangeHRM Login" time="7.572">
     <system-out><![CDATA[
-Scenario: Verify login page components             # src/test/resources/features/Login.feature:10
+Scenario: Verify login page components             # src/test/resources/features/Login.feature:9
+Browser launched for scenario: Verify login page components
   Given user is on the OrangeHRM login page        # stepDefinitions.LoginSteps.user_is_on_login_page()
   Then verify all components present in login page # stepDefinitions.LoginSteps.verifyAllComponentsPresentInLoginPage()
+Browser closed after scenario: Verify login page components
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:07:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:09:04 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:07:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:09:04 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="Login with invalid credentials" classname="OrangeHRM Login" time="8.537">
+  <testcase name="Login with invalid credentials" classname="OrangeHRM Login" time="9.118">
     <system-out><![CDATA[
-Scenario Outline: Login with invalid credentials    # src/test/resources/features/Login.feature:22
+Scenario Outline: Login with invalid credentials    # src/test/resources/features/Login.feature:21
+Browser launched for scenario: Login with invalid credentials
   Given user is on the OrangeHRM login page         # stepDefinitions.LoginSteps.user_is_on_login_page()
   When user enters invalid "not admin" and "272562" # stepDefinitions.LoginSteps.userEntersInvalidUsernameAndPassword(java.lang.String,java.lang.String)
   And user clicks the login button                  # stepDefinitions.LoginSteps.user_clicks_login_button()
   Then verify the error message displayed           # stepDefinitions.LoginSteps.verifyTheErrorMessageDisplayed()
+Browser closed after scenario: Login with invalid credentials
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:07:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:09:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:07:44 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:09:11 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="Verify the functionality when user clicks on forget password link" classname="OrangeHRM Login" time="8.249">
+  <testcase name="Verify the functionality when user clicks on forget password link" classname="OrangeHRM Login" time="8.608">
     <system-out><![CDATA[
-Scenario: Verify the functionality when user clicks on forget password link # src/test/resources/features/Login.feature:25
+Scenario: Verify the functionality when user clicks on forget password link # src/test/resources/features/Login.feature:24
+Browser launched for scenario: Verify the functionality when user clicks on forget password link
   Given user is on the OrangeHRM login page                                 # stepDefinitions.LoginSteps.user_is_on_login_page()
   When user clicks on Forget your password button                           # stepDefinitions.LoginSteps.userClicksOnForgetYourPasswordButton()
   Then user redirects to reset password page                                # stepDefinitions.LoginSteps.userRedirectsToResetPasswordPage()
+Browser closed after scenario: Verify the functionality when user clicks on forget password link
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:07:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:09:21 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:07:52 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:09:21 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="Verify the components present in reset password page" classname="OrangeHRM Login" time="9.096">
+  <testcase name="Verify the components present in reset password page" classname="OrangeHRM Login" time="11.072">
     <system-out><![CDATA[
-Scenario: Verify the components present in reset password page     # src/test/resources/features/Login.feature:31
+Scenario: Verify the components present in reset password page     # src/test/resources/features/Login.feature:30
+Browser launched for scenario: Verify the components present in reset password page
   Given user is on the OrangeHRM login page                        # stepDefinitions.LoginSteps.user_is_on_login_page()
   When user clicks on Forget your password button                  # stepDefinitions.LoginSteps.userClicksOnForgetYourPasswordButton()
   And user redirects to reset password page                        # stepDefinitions.LoginSteps.userRedirectsToResetPasswordPage()
 Reset Password
 Please enter your username to identify your account to reset your password
   Then user verifies the components present in reset password page # stepDefinitions.LoginSteps.userVerifiesTheComponentsPresentInResetPasswordPage()
+Browser closed after scenario: Verify the components present in reset password page
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:08:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:09:29 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:08:01 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:09:29 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="Verify the broken links present in Login page" classname="OrangeHRM Login" time="9.529">
+  <testcase name="Verify the broken links present in Login page" classname="OrangeHRM Login" time="12.17">
     <system-out><![CDATA[
-Scenario: Verify the broken links present in Login page # src/test/resources/features/Login.feature:38
+Scenario: Verify the broken links present in Login page # src/test/resources/features/Login.feature:37
+Browser launched for scenario: Verify the broken links present in Login page
   Given user is on the OrangeHRM login page             # stepDefinitions.LoginSteps.user_is_on_login_page()
-https://www.linkedin.com/company/orangehrm/mycompany/ is a broken link with response code: 999
+https://www.linkedin.com/company/orangehrm/mycompany/ is a valid link with response code: 200
 https://www.facebook.com/OrangeHRM/ is a valid link with response code: 200
 https://twitter.com/orangehrm?lang=en is a broken link with response code: 403
 https://www.youtube.com/c/OrangeHRMInc is a valid link with response code: 200
 http://www.orangehrm.com/ is a valid link with response code: 301
   Then i verify all links present in login page         # stepDefinitions.LoginSteps.iVerifyAllLinksPresentInLoginPage()
+Browser closed after scenario: Verify the broken links present in Login page
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:08:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:09:40 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:08:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:09:40 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="Verify the broken images present in Login page" classname="OrangeHRM Login" time="8.171">
+  <testcase name="Verify the broken images present in Login page" classname="OrangeHRM Login" time="10.606">
     <system-out><![CDATA[
-Scenario: Verify the broken images present in Login page # src/test/resources/features/Login.feature:43
+Scenario: Verify the broken images present in Login page # src/test/resources/features/Login.feature:42
+Browser launched for scenario: Verify the broken images present in Login page
   Given user is on the OrangeHRM login page              # stepDefinitions.LoginSteps.user_is_on_login_page()
-Total images : 3
+Total images: 3
 https://opensource-demo.orangehrmlive.com/web/images/ohrm_branding.png?v=1721393199309 is a valid image. Response code: 200
 https://opensource-demo.orangehrmlive.com/web/images/ohrm_logo.png is a valid image. Response code: 200
 https://opensource-demo.orangehrmlive.com/web/images/ohrm_logo.png is a valid image. Response code: 200
   Then i verify all images present in login page         # stepDefinitions.LoginSteps.iVerifyAllImagesPresentInLoginPage()
+Browser closed after scenario: Verify the broken images present in Login page
 ]]></system-out>
-    <system-err><![CDATA[Jul 23, 2025 10:08:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 24, 2025 9:09:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 23, 2025 10:08:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 9:09:52 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>

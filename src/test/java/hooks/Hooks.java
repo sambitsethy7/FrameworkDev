@@ -24,22 +24,35 @@ public class Hooks {
     public void beforeScenario(Scenario scenario) {
         test = extent.createTest(scenario.getName());
         driver = DriverFactory.initializeDriver();
+        System.out.println("Browser launched for scenario: " + scenario.getName());
     }
 
     @After
     public void afterScenario(Scenario scenario) {
-        if (scenario.isFailed()) {
-            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", "Failure Screenshot");
-            test.fail("Test failed. Screenshot attached.");
-        } else {
-            test.pass("Test passed.");
+        try {
+            if (scenario.isFailed()) {
+                if (driver != null) {
+                    byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                    scenario.attach(screenshot, "image/png", "Failure Screenshot");
+                    test.fail("Test failed. Screenshot attached.");
+                } else {
+                    test.fail("Test failed, but screenshot was not captured because driver was null.");
+                }
+            } else {
+                test.pass("Test passed.");
+            }
+        } catch (Exception e) {
+            test.fail("Exception in @After hook: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            DriverFactory.quitDriver();  // ✅ Always quit the driver
+            System.out.println("Browser closed after scenario: " + scenario.getName());
         }
-        DriverFactory.quitDriver();
     }
 
     @AfterAll
     public static void tearDownExtent() {
         extent.flush();
+        System.out.println("Extent report flushed.");
     }
 }

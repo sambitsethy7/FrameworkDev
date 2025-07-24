@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LoginPage {
@@ -102,23 +104,53 @@ public class LoginPage {
     }
 
     public void verifyAllImages() throws Exception {
-        List<WebElement> imagesList = driver.findElements(By.tagName("img"));
-        System.out.println("Total images : " + imagesList.size());
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+//        List<WebElement> imagesList = driver.findElements(By.tagName("img"));
+//        System.out.println("Total images : " + imagesList.size());
+//
+//        for (WebElement imgElement : imagesList) {
+//            String imgURl = imgElement.getAttribute("src");
+//            try {
+//                HttpURLConnection connection = (HttpURLConnection) (new URL(imgURl).openConnection());
+//                connection.setRequestMethod("HEAD");
+//                connection.connect();
+//                int responseCode = connection.getResponseCode();
+//                if (responseCode >= 400) {
+//                    System.out.println(imgURl + " is a broken image. Response code: " + responseCode);
+//                } else {
+//                    System.out.println(imgURl + " is a valid image. Response code: " + responseCode);
+//                }
+//            } catch (Exception e) {
+//                System.out.println(imgURl + " caused an exception: " + e.getMessage());
+//            }
+//        }
+        // Scroll to bottom to trigger lazy load
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("arguments[0].scrollIntoView(true);");
+        Thread.sleep(2000);  // Replace with WebDriverWait if needed
 
+        List<WebElement> imagesList = driver.findElements(By.tagName("img"));
+        System.out.println("Total images: " + imagesList.size());
+
+        List<String> imgUrls = new ArrayList<>();
         for (WebElement imgElement : imagesList) {
-            String imgURl = imgElement.getAttribute("src");
+            imgUrls.add(imgElement.getAttribute("src"));  // capture src while element is fresh
+        }
+
+        for (String imgUrl : imgUrls) {
             try {
-                HttpURLConnection connection = (HttpURLConnection) (new URL(imgURl).openConnection());
+                HttpURLConnection connection = (HttpURLConnection) (new URL(imgUrl).openConnection());
                 connection.setRequestMethod("HEAD");
                 connection.connect();
                 int responseCode = connection.getResponseCode();
                 if (responseCode >= 400) {
-                    System.out.println(imgURl + " is a broken image. Response code: " + responseCode);
+                    System.out.println(imgUrl + " is a broken image. Response code: " + responseCode);
                 } else {
-                    System.out.println(imgURl + " is a valid image. Response code: " + responseCode);
+                    System.out.println(imgUrl + " is a valid image. Response code: " + responseCode);
                 }
             } catch (Exception e) {
-                System.out.println(imgURl + " caused an exception: " + e.getMessage());
+                System.out.println(imgUrl + " caused an exception: " + e.getMessage());
             }
         }
     }

@@ -18,4 +18,14 @@ public class DashboardSteps {
     public void userClicksOnLogoutOption() throws Exception {
         dashboardPage.clickLogout();
     }
+
+    @Then("i verify all images present in dashboard page")
+    public void iVerifyAllImagesPresentInDashboardPage() throws Exception {
+        dashboardPage.verifyAllImages();
+    }
+
+    @Then("i verify all links present in dashboard page")
+    public void iVerifyAllLinksPresentInDashboardPage() throws Exception {
+        dashboardPage.verifyAllLinks();
+    }
 }
