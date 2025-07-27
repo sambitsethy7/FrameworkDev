@@ -6,18 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import java.util.stream.Collectors;
-
 
 
 public class DashboardPage {
+    private static final Logger log = LoggerFactory.getLogger(DashboardPage.class);
     WebDriver driver;
     LoginPage loginPage;
 
@@ -27,6 +25,12 @@ public class DashboardPage {
     By searchBox = By.xpath("//input[@placeholder='Search']");
     By optionValue = By.xpath("//a[contains(@class,'menu-item')]//span");
     By leftMenuItems = By.xpath("//a[contains(@class,'menu-item')]");
+    By sectionHeaders = By.xpath("//div[contains(@class,'widget-name')]");
+    By recordsFound = By.xpath("//div[contains(@class,'paper')]//following-sibling::div[1]//span");
+
+    //Left nav elements
+    By adminOption = By.xpath("//ul[1]//li//span[text()='Admin']");
+
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -86,5 +90,24 @@ public class DashboardPage {
             actualMenu.add(item.getText().trim());
         }
         return actualMenu;
+    }
+
+    public List<String> getAllHeadersOfEachSection() throws Exception {
+        List<WebElement> headers = driver.findElements(sectionHeaders);
+        List<String> actualList = new ArrayList<>();
+        for (WebElement header : headers) {
+            actualList.add(header.getText());
+        }
+        log.info("All headers are fetched");
+        return actualList;
+    }
+
+    public void clickAdmin() throws Exception {
+        driver.findElement(adminOption).click();
+    }
+
+    public String verifyRecordsFound() throws Exception {
+        String actual = driver.findElement(recordsFound).getText();
+        return actual;
     }
 }

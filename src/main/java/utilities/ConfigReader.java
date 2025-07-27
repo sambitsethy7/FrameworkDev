@@ -23,15 +23,27 @@ public class ConfigReader {
         return properties.getProperty(key);
     }
 
-    public static List<String> getExpectedMenuItems(){
-        Properties prop=new Properties();
-        try{
-            FileInputStream fis=new FileInputStream("src/test/resources/testdata/expectedMenu.properties");
+    public static List<String> getExpectedMenuItems() {
+        Properties prop = new Properties();
+        try {
+            FileInputStream fis = new FileInputStream("src/test/resources/testdata/expectedMenu.properties");
             prop.load(fis);
-        } catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         String menu = prop.getProperty("left.menu.items");
+        return Arrays.asList(menu.split(","));
+    }
+
+    public static List<String> getSectionHeadersList() {
+        Properties prop = new Properties();
+        try{
+            FileInputStream fis = new FileInputStream("src/test/resources/testdata/headersList.properties");
+            prop.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String menu = prop.getProperty("header.menu.items");
         return Arrays.asList(menu.split(","));
     }
 }

@@ -2,7 +2,6 @@ package utilities;
 
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;

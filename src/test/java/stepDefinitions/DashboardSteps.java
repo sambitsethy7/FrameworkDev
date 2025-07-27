@@ -53,4 +53,23 @@ public class DashboardSteps {
         List<String> actualItems = dashboardPage.getLeftNavigationItems();
         Assert.assertEquals("Menu items do not match!", expectedItems, actualItems);
     }
+
+    @Then("user gets all the headers of each section in dashboard")
+    public void userGetsAllTheHeadersOfEachSectionInDashboard() throws Exception {
+        List<String> expectedList = ConfigReader.getSectionHeadersList();
+        List<String> actualList=dashboardPage.getAllHeadersOfEachSection();
+        Assert.assertTrue(actualList.containsAll(expectedList));
+    }
+
+    @When("user clicks on Admin from left nav menu")
+    public void userClicksOnAdminFromLeftNavMenu() throws Exception {
+        dashboardPage.clickAdmin();
+    }
+
+    @Then("user verifies the number of records found by default in Admin")
+    public void userVerifiesTheNumberOfRecordsFoundByDefaultInAdmin() throws Exception {
+        String actualValue = dashboardPage.verifyRecordsFound();
+        String expectedValue = "Records Found";
+        Assert.assertTrue(actualValue.endsWith(expectedValue));
+    }
 }

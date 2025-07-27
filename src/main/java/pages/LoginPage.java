@@ -128,7 +128,7 @@ public class LoginPage {
         // Scroll to bottom to trigger lazy load
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("arguments[0].scrollIntoView(true);");
-        Thread.sleep(2000);  // Replace with WebDriverWait if needed
+        Thread.sleep(2000);
 
         List<WebElement> imagesList = driver.findElements(By.tagName("img"));
         System.out.println("Total images: " + imagesList.size());
