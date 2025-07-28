@@ -8,8 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepDefinitions", "hooks"},
-        tags = "@Sambit",
-        plugin = {"pretty", "json:target/cucumber-reports/CucumberTestReport.json"},
+        tags = "",
+        plugin = {"pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "html:target/cucumber-reports/CucumberTestReport.html",
+                "rerun:target/failed_scenarios.txt"},
         monochrome = true
 )
 public class TestRunner {

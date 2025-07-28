@@ -9,7 +9,6 @@ Feature: Dashboard which displays after login
   Scenario: Verify the options present in user dropdown
     Then verify the options present in user dropdown
 
-  @Smoke
   Scenario: User logouts from application
     When verify the options present in user dropdown
     Then user clicks on logout option
@@ -39,14 +38,13 @@ Feature: Dashboard which displays after login
       | cl      | Claim       |
       | bu      | Buzz        |
 
+    @Sam
   Scenario: Verify the options present in Left navigation
     Then user should see correct navigation menu options
 
-    @Sambit
   Scenario: Verify the headers of each section in dashboard
     Then user gets all the headers of each section in dashboard
 
-    @SAM
   Scenario: Verify the number of records found in Admin page by default
     When user clicks on Admin from left nav menu
     Then user verifies the number of records found by default in Admin

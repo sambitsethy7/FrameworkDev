@@ -9,7 +9,6 @@ Feature: Dashboard which displays after login
   Scenario: Verify the options present in user dropdown
     Then verify the options present in user dropdown
 
-  @Smoke
   Scenario: User logouts from application
     When verify the options present in user dropdown
     Then user clicks on logout option
