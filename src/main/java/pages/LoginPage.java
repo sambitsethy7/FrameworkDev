@@ -1,5 +1,6 @@
 package pages;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 public class LoginPage {
     WebDriver driver;
 
@@ -28,6 +30,8 @@ public class LoginPage {
     By usernameIcon = By.xpath("//i");
     By usernameLabel = By.xpath("//label[text()='Username']");
     By cancelButton = By.xpath("//button[contains(@class,'cancel')]");
+    By givenUsername = By.xpath("//div[contains(@class,'error')]//p[1]");
+    By givenPassword = By.xpath("//div[contains(@class,'error')]//p[2]");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -152,6 +156,42 @@ public class LoginPage {
             } catch (Exception e) {
                 System.out.println(imgUrl + " caused an exception: " + e.getMessage());
             }
+        }
+    }
+
+    public void verifyUserNameAndPassword() throws Exception {
+        String expectedUsername = "Admin";
+        String expectedPassword = "admin123";
+        String actualUsername = driver.findElement(givenUsername).getText();
+        String actualPassword = driver.findElement(givenPassword).getText();
+        if (actualUsername.contains(expectedUsername) && actualPassword.contains(expectedPassword)) {
+            System.out.println("Username & password is displayed");
+            log.info("Test Case Passed");
+        } else {
+            System.out.println("Username & password is not displayed");
+            log.info("Test Case Failed");
+        }
+    }
+
+    By usernameFieldError = By.xpath("(//span[text()='Required'])[1]");
+    By passwordFieldError = By.xpath("(//span[text()='Required'])[2]");
+
+    public void verifyErrorMessageDisplayedInUsernameAndPasswordField() throws Exception {
+        String expectedFieldError = "Required";
+        String actualUsernameFieldError = driver.findElement(usernameFieldError).getText();
+        String expectedFieldErrorColor = "rgba(235, 9, 16, 1)";
+        String actualUsernameFieldErrorColor = driver.findElement(usernameFieldError).getCssValue("color");
+        String actualPasswordFieldErrorColor = driver.findElement(passwordFieldError).getCssValue("color");
+        String actualPasswordFieldError = driver.findElement(passwordFieldError).getText();
+        if (actualUsernameFieldError.equals(expectedFieldError) && actualPasswordFieldError.equals(expectedFieldError)) {
+            log.info("Error message is displayed as Required");
+        } else {
+            log.info("Wrong error message displayed");
+        }
+        if (actualUsernameFieldErrorColor.equals(expectedFieldErrorColor) && actualPasswordFieldErrorColor.equals(expectedFieldErrorColor)) {
+            log.info("Expected color is displayed");
+        } else {
+            log.info("Expected color is not displaying " + actualUsernameFieldErrorColor);
         }
     }
 }

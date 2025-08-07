@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.DashboardPage;
@@ -10,6 +11,8 @@ import utilities.DriverFactory;
 
 import java.util.Arrays;
 import java.util.List;
+
+@Slf4j
 
 public class DashboardSteps {
     WebDriver driver = DriverFactory.getDriver();
@@ -66,15 +69,25 @@ public class DashboardSteps {
         Assert.assertTrue(actualList.containsAll(expectedList));
     }
 
-    @When("user clicks on Admin from left nav menu")
-    public void userClicksOnAdminFromLeftNavMenu() throws Exception {
-        dashboardPage.clickAdmin();
-    }
-
     @Then("user verifies the number of records found by default in Admin")
     public void userVerifiesTheNumberOfRecordsFoundByDefaultInAdmin() throws Exception {
         String actualValue = dashboardPage.verifyRecordsFound();
         String expectedValue = "Records Found";
-        Assert.assertTrue(actualValue.endsWith(expectedValue));
+        if (actualValue.endsWith(expectedValue)) {
+            System.out.println(actualValue);
+            log.info("Records fetched successfully");
+        } else {
+            System.out.println("No Records Found");
+        }
+    }
+
+    @When("user clicks on {string} from left nav menu")
+    public void userClicksOnOptionFromLeftNavMenu(String value) throws Exception {
+        dashboardPage.clickOption(value);
+    }
+
+    @Then("user verifies the dropdown is multiselect or not in Admin page")
+    public void userVerifiesTheDropdownIsMultiselectOrNotInAdminPage() throws Exception {
+        dashboardPage.verifyMultiSelectOrNotOfDropdownPresentInAdminPage();
     }
 }

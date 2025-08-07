@@ -81,4 +81,14 @@ public class LoginSteps {
     public void iVerifyAllImagesPresentInLoginPage() throws Exception {
         loginPage.verifyAllImages();
     }
+
+    @Then("i verify the username and password mentioned in login page")
+    public void iVerifyTheUsernameAndPasswordMentionedInLoginPage() throws Exception {
+        loginPage.verifyUserNameAndPassword();
+    }
+
+    @Then("i verify the error displayed in username and password field")
+    public void iVerifyTheErrorDisplayedInUsernameAndPasswordField() throws Exception {
+        loginPage.verifyErrorMessageDisplayedInUsernameAndPasswordField();
+    }
 }

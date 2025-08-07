@@ -40,7 +40,7 @@ body{padding:0;margin:0}.html-formatter{max-width:1600px;min-height:100vh;margin
 <div id="content">
 </div>
 <script>
-window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"22.0.0","implementation":{"name":"cucumber-jvm","version":"7.15.0"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"17.0.15+6-LTS"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":1753686841,"nanos":885882700}}},{"testRunFinished":{"success":true,"timestamp":{"seconds":1753686843,"nanos":534809000}}}];
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"22.0.0","implementation":{"name":"cucumber-jvm","version":"7.15.0"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"17.0.15+6-LTS"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":1754550576,"nanos":544331400}}},{"testRunFinished":{"success":true,"timestamp":{"seconds":1754550577,"nanos":894644700}}}];
 </script>
 <script>
 /*! For license information please see main.js.LICENSE.txt */

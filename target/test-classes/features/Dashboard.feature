@@ -6,7 +6,6 @@ Feature: Dashboard which displays after login
     When user clicks the login button
     Then user should see the OrangeHRM dashboard
 
-    @SAM
   Scenario: Verify the options present in user dropdown
     Then verify the options present in user dropdown
 
@@ -46,5 +45,9 @@ Feature: Dashboard which displays after login
     Then user gets all the headers of each section in dashboard
 
   Scenario: Verify the number of records found in Admin page by default
-    When user clicks on Admin from left nav menu
+    When user clicks on 'Admin' from left nav menu
     Then user verifies the number of records found by default in Admin
+
+  Scenario: Verify the dropdown is multiselect or not in Admin page
+    When user clicks on 'Admin' from left nav menu
+    Then user verifies the dropdown is multiselect or not in Admin page

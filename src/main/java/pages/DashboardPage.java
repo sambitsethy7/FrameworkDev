@@ -1,21 +1,19 @@
 package pages;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Slf4j
 public class DashboardPage {
-    private static final Logger log = LoggerFactory.getLogger(DashboardPage.class);
     WebDriver driver;
     LoginPage loginPage;
 
@@ -28,9 +26,9 @@ public class DashboardPage {
     By sectionHeaders = By.xpath("//div[contains(@class,'widget-name')]");
     By recordsFound = By.xpath("//div[contains(@class,'paper')]//following-sibling::div[1]//span");
 
-    //Left nav elements
-    By adminOption = By.xpath("//ul[1]//li//span[text()='Admin']");
-
+    //Admin page components
+    By userRoleDropdown = By.xpath("(//div[contains(@class,'select-text--after')]//i)[1]");
+    By statusDropdown = By.xpath("(//div[contains(@class,'select-text--after')]//i)[2]");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -107,12 +105,27 @@ public class DashboardPage {
         return actualList;
     }
 
-    public void clickAdmin() throws Exception {
-        driver.findElement(adminOption).click();
+    public String verifyRecordsFound() throws Exception {
+        return driver.findElement(recordsFound).getText();
     }
 
-    public String verifyRecordsFound() throws Exception {
-        String actual = driver.findElement(recordsFound).getText();
-        return actual;
+    public void clickOption(String value) throws Exception {
+        driver.findElement(By.xpath("//ul[1]//li//span[text()='" + value + "']")).click();
+        log.info(value + " is clicked successfully");
+    }
+
+    public void verifyMultiSelectOrNotOfDropdownPresentInAdminPage() throws Exception {
+        String classAttributeOfUserRole = driver.findElement(userRoleDropdown).getAttribute("class");
+        if (classAttributeOfUserRole.contains("multiselect") || classAttributeOfUserRole.contains("multi") || classAttributeOfUserRole.contains("multiple")) {
+            log.info("User Role is a multiselect dropdown");
+        } else {
+            log.info("User Role is a single value select dropdown");
+        }
+        String classAttributeOfStatus = driver.findElement(statusDropdown).getAttribute("class");
+        if (classAttributeOfStatus.contains("multiselect") || classAttributeOfStatus.contains("multi") || classAttributeOfStatus.contains("multiple")) {
+            log.info("Status is a multiselect dropdown");
+        } else {
+            log.info("Status is a single value select dropdown");
+        }
     }
 }
