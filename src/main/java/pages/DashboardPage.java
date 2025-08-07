@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,12 @@ public class DashboardPage {
         userMenu.click();
         Thread.sleep(1000);
         List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(userDropdownMenu));
-        List<String> actualOptions = options.stream().map(e -> e.getText().trim().replace("\n", " ")).toList();
+        List<String> actualOptions = new ArrayList<>();
+        for (WebElement option : options) {
+            String text = option.getText();
+            actualOptions.add(text);
+        }
+//        List<String> actualOptions = options.stream().map(e -> e.getText().trim().replace("\n", " ")).toList();
         return actualOptions;
     }
 

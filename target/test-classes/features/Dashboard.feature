@@ -6,6 +6,7 @@ Feature: Dashboard which displays after login
     When user clicks the login button
     Then user should see the OrangeHRM dashboard
 
+    @SAM
   Scenario: Verify the options present in user dropdown
     Then verify the options present in user dropdown
 
@@ -38,7 +39,6 @@ Feature: Dashboard which displays after login
       | cl      | Claim       |
       | bu      | Buzz        |
 
-    @Sam
   Scenario: Verify the options present in Left navigation
     Then user should see correct navigation menu options
 
