@@ -59,6 +59,7 @@ Feature: Dashboard which displays after login
     Then user clicks on Save button in Add User page
     And user redirects to System users page
 
+    @New
   Scenario: Verify the delete functionality in User management page
     And user clicks on 'Admin' from left nav menu
     When user clicks on delete icon from existing records

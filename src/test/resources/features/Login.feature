@@ -48,7 +48,6 @@ Feature: OrangeHRM Login
     Given user is on the OrangeHRM login page
     Then i verify the username and password mentioned in login page
 
-    @SAM
   Scenario: Verify the error message displayed in Login page when user clicks on Login button without entering any credentials
     Given user is on the OrangeHRM login page
     When user clicks the login button
