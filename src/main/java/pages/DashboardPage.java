@@ -1,10 +1,8 @@
 package pages;
 
 import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,6 +27,15 @@ public class DashboardPage {
     //Admin page components
     By userRoleDropdown = By.xpath("(//div[contains(@class,'select-text--after')]//i)[1]");
     By statusDropdown = By.xpath("(//div[contains(@class,'select-text--after')]//i)[2]");
+    By addButton = By.xpath("//button[text()=' Add ']");
+    By employeeName = By.xpath("//input[contains(@placeholder,'Type')]");
+    By usernameTextField = By.xpath("//label[text()='Username']/parent::div//following-sibling::div//input");
+    By passwordTextField = By.xpath("//label[text()='Password']/parent::div//following-sibling::div//input");
+    By confirmPasswordTextField = By.xpath("//label[text()='Confirm Password']/parent::div//following-sibling::div//input");
+    By saveButton = By.xpath("//button[@type='submit']");
+    By deleteButton = By.xpath("(//div[@role='rowgroup']//button)[3]//i");
+    By yesDeletePopUp = By.xpath("//button[text()=' Yes, Delete ']");
+    By nextDeleteButton = By.xpath("(//div[@role='rowgroup']//button)[5]//i");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -126,6 +133,69 @@ public class DashboardPage {
             log.info("Status is a multiselect dropdown");
         } else {
             log.info("Status is a single value select dropdown");
+        }
+    }
+
+    public void clickOnAddButtonInSystemUsers() throws Exception {
+        driver.findElement(addButton).isDisplayed();
+        driver.findElement(addButton).click();
+    }
+
+    public void enterDataToAddUserPage() throws Exception {
+        driver.findElement(userRoleDropdown).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[text()='Admin'])[3]"))).click();
+        driver.findElement(employeeName).sendKeys("test");
+        Thread.sleep(10000);
+        List<WebElement> suggestions = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@role='listbox']")));
+        if (!suggestions.isEmpty()) {
+            suggestions.get(0).click();
+            log.info("value from autosuggestive dropdown is clicked");
+        } else {
+            log.info("No suggestions found");
+        }
+        driver.findElement(statusDropdown).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Enabled']"))).click();
+        driver.findElement(usernameTextField).sendKeys(RandomStringUtils.randomAlphabetic(8));
+        driver.findElement(passwordTextField).sendKeys("Test@123");
+        driver.findElement(confirmPasswordTextField).sendKeys("Test@123");
+        log.info("All details has been entered successfully");
+    }
+
+    public void clickSave() throws Exception {
+        driver.findElement(saveButton).click();
+    }
+
+    public void redirectToSystemUsersPageValidation() throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(addButton));
+        if (driver.getCurrentUrl().endsWith("viewSystemUsers")) {
+            System.out.println("Redirection to System Users Page is done");
+        } else {
+            log.info("Redirection failed");
+        }
+    }
+
+    public void clickOnDeleteIcon() throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(deleteButton)).click();
+            log.info("delete icon is clicked");
+        } catch (Exception e) {
+            wait.until(ExpectedConditions.elementToBeClickable(nextDeleteButton)).click();
+            log.info("next found delete icon is clicked");
+        }
+    }
+
+    public void deleteRecord() throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        if (driver.findElement(yesDeletePopUp).isDisplayed()) {
+            wait.until(ExpectedConditions.elementToBeClickable(yesDeletePopUp));
+            driver.findElement(yesDeletePopUp).click();
+            wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+            log.info("Record deleted successfully");
+        } else {
+            log.info("Pop up not displayed");
         }
     }
 }

@@ -51,3 +51,16 @@ Feature: Dashboard which displays after login
   Scenario: Verify the dropdown is multiselect or not in Admin page
     When user clicks on 'Admin' from left nav menu
     Then user verifies the dropdown is multiselect or not in Admin page
+
+  Scenario: Verify user is able to add in Admin > User Management page
+    When user clicks on 'Admin' from left nav menu
+    And user clicks on Add button in System users
+    And user enters valid data to Add User page
+    Then user clicks on Save button in Add User page
+    And user redirects to System users page
+
+    @Latest
+  Scenario: Verify the delete functionality in User management page
+    And user clicks on 'Admin' from left nav menu
+    When user clicks on delete icon from existing records
+    Then user deletes the record

@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 import pages.DashboardPage;
 import utilities.ConfigReader;
 import utilities.DriverFactory;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -89,5 +89,35 @@ public class DashboardSteps {
     @Then("user verifies the dropdown is multiselect or not in Admin page")
     public void userVerifiesTheDropdownIsMultiselectOrNotInAdminPage() throws Exception {
         dashboardPage.verifyMultiSelectOrNotOfDropdownPresentInAdminPage();
+    }
+
+    @And("user clicks on Add button in System users")
+    public void userClicksOnAddButtonInSystemUsers() throws Exception {
+        dashboardPage.clickOnAddButtonInSystemUsers();
+    }
+
+    @And("user enters valid data to Add User page")
+    public void userEntersValidDataToAddUserPage() throws Exception {
+        dashboardPage.enterDataToAddUserPage();
+    }
+
+    @Then("user clicks on Save button in Add User page")
+    public void userClicksOnSaveButtonInAddUserPage() throws Exception {
+        dashboardPage.clickSave();
+    }
+
+    @And("user redirects to System users page")
+    public void userRedirectsToSystemUsersPage() throws Exception {
+        dashboardPage.redirectToSystemUsersPageValidation();
+    }
+
+    @When("user clicks on delete icon from existing records")
+    public void userClicksOnDeleteIconFromExistingRecords() throws Exception {
+        dashboardPage.clickOnDeleteIcon();
+    }
+
+    @Then("user deletes the record")
+    public void userDeletesTheRecord() throws Exception {
+        dashboardPage.deleteRecord();
     }
 }
