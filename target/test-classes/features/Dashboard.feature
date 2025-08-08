@@ -19,24 +19,24 @@ Feature: Dashboard which displays after login
 
   Scenario: Verify the links present in dashboard page
     Then i verify all links present in dashboard page
-
+    
   Scenario Outline: Left navigation search validation
     When user enters "<text>" in the search box
     Then "<value>" option should be visible
     Examples:
       | text    | value       |
-      | ad      | Admin       |
-      | pi      | PIM         |
-      | le      | Leave       |
-      | ti      | Time        |
+      | adm     | Admin       |
+      | pim     | PIM         |
+      | lea     | Leave       |
+      | tim     | Time        |
       | recruit | Recruitment |
-      | my      | My Info     |
-      | per     | Performance |
-      | da      | Dashboard   |
-      | di      | Directory   |
-      | mai     | Maintenance |
-      | cl      | Claim       |
-      | bu      | Buzz        |
+      | my I    | My Info     |
+      | perfo   | Performance |
+      | dash    | Dashboard   |
+      | direc   | Directory   |
+      | main    | Maintenance |
+      | clai    | Claim       |
+      | buz     | Buzz        |
 
   Scenario: Verify the options present in Left navigation
     Then user should see correct navigation menu options
@@ -59,7 +59,6 @@ Feature: Dashboard which displays after login
     Then user clicks on Save button in Add User page
     And user redirects to System users page
 
-    @New
   Scenario: Verify the delete functionality in User management page
     And user clicks on 'Admin' from left nav menu
     When user clicks on delete icon from existing records

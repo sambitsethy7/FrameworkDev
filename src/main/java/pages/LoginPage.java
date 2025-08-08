@@ -16,8 +16,8 @@ import java.util.List;
 public class LoginPage {
     WebDriver driver;
 
-    By usernameField = By.name("username");
-    By passwordField = By.name("password");
+    By usernameField = By.xpath("//input[@placeholder='Username']");
+    By passwordField = By.xpath("//input[@placeholder='Password']");
     By loginButton = By.xpath("//button[@type='submit']");
     By loginText = By.xpath("//h5");
     By forgotPasswordLink = By.xpath("//div[contains(@class,'forgot')]//p");

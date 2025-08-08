@@ -33,9 +33,9 @@ public class DashboardPage {
     By passwordTextField = By.xpath("//label[text()='Password']/parent::div//following-sibling::div//input");
     By confirmPasswordTextField = By.xpath("//label[text()='Confirm Password']/parent::div//following-sibling::div//input");
     By saveButton = By.xpath("//button[@type='submit']");
-    By deleteButton = By.xpath("(//div[@role='rowgroup']//button)[3]//i");
-    By yesDeletePopUp = By.xpath("//button[text()=' Yes, Delete ']");
-    By nextDeleteButton = By.xpath("(//div[@role='rowgroup']//button)[5]//i");
+    By deleteButton = By.xpath("(//button//i[contains(@class,'trash')])[last()]");
+    By yesDeletePopUp = By.xpath("//div[contains(@class,'modal-footer')]//button[2]");
+//    By nextDeleteButton = By.xpath("(//div[@role='rowgroup']//button)[5]//i");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -81,7 +81,7 @@ public class DashboardPage {
 
     public void verifyVisibleOption(String value) throws Exception {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(searchBox));
+        wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
         String actualValue = driver.findElement(optionValue).getText();
         if (actualValue.equals(value)) {
             System.out.println("Search is valid with " + actualValue);
@@ -177,25 +177,15 @@ public class DashboardPage {
     }
 
     public void clickOnDeleteIcon() throws Exception {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(deleteButton)).click();
-            log.info("delete icon is clicked");
-        } catch (Exception e) {
-            wait.until(ExpectedConditions.elementToBeClickable(nextDeleteButton)).click();
-            log.info("next found delete icon is clicked");
-        }
+        driver.findElement(deleteButton).isDisplayed();
+        driver.findElement(deleteButton).click();
+        log.info("Delete button is clicked");
     }
 
     public void deleteRecord() throws Exception {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        if (driver.findElement(yesDeletePopUp).isDisplayed()) {
-            wait.until(ExpectedConditions.elementToBeClickable(yesDeletePopUp));
-            driver.findElement(yesDeletePopUp).click();
-            wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-            log.info("Record deleted successfully");
-        } else {
-            log.info("Pop up not displayed");
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(yesDeletePopUp));
+        driver.findElement(yesDeletePopUp).click();
+        log.info("Record is deleted successfully");
     }
 }

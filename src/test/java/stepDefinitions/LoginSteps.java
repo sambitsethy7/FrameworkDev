@@ -31,9 +31,9 @@ public class LoginSteps {
     @Then("user should see the OrangeHRM dashboard")
     public void user_should_see_dashboard() {
         String expectedUrl = "dashboard";
-        boolean isDashboard = driver.getCurrentUrl().contains(expectedUrl);
+        Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrl));
 //        assert isDashboard : "User is not on dashboard.";
-        Assert.assertTrue(isDashboard);
+//        Assert.assertTrue(isDashboard);
     }
 
     @Then("verify all components present in login page")
