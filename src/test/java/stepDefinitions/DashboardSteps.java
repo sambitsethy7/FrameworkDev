@@ -180,4 +180,23 @@ public class DashboardSteps {
                 break;
         }
     }
+
+    @When("user clicks on Help button in Admin page")
+    public void userClicksOnHelpButtonInAdminPage() throws Exception {
+        dashboardPage.userClicksOnHelpButtonInAdminPage();
+    }
+
+    @Then("user verifies the redirection to new tab and verify it's components")
+    public void userVerifiesTheRedirectionToNewTabAndVerifyItSComponents() throws Exception {
+        dashboardPage.userVerifiesTheRedirectionToNewTabAndVerifyItsComponents();
+    }
+
+    @When("user clicks on Employment Status")
+    public void userClicksOnEmploymentStatus() throws Exception {
+        dashboardPage.userClickOnEmploymentStatus();
+    }
+
+    @Then("user verifies the options present in Employment Status")
+    public void userVerifiesTheOptionsPresentInEmploymentStatus() {
+    }
 }

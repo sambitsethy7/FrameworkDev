@@ -102,3 +102,14 @@ Feature: Dashboard which displays after login
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Configuration' dropdown
     Then user verifies the value present in 'Configuration' dropdown
+
+
+  Scenario: Verify the functionality when user clicks help in Admin page
+    And user clicks on 'Admin' from left nav menu
+    When user clicks on Help button in Admin page
+    Then user verifies the redirection to new tab and verify it's components
+
+  Scenario: Verify the options present in the PIM > Employment Status
+    And user clicks on 'PIM' from left nav menu
+    When user clicks on Employment Status
+    Then user verifies the options present in Employment Status

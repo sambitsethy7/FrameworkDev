@@ -64,42 +64,47 @@ Feature: Dashboard which displays after login
     When user clicks on delete icon from existing records
     Then user deletes the record
 
-    @SAM
   Scenario: Verify the options present in top bar menu of Admin page
     And user clicks on 'Admin' from left nav menu
     Then user verifies the options present in top bar menu of Admin page
 
-    @SAM
+
   Scenario: Verify the table header present in Admin page
     And user clicks on 'Admin' from left nav menu
     Then user verifies the table header content present in Admin page
 
-    @SAM
+
   Scenario: Verify the options present in User Management dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'User Management' dropdown
     Then user verifies the value present in 'User Management' dropdown
 
-    @SAM
+
   Scenario: Verify the options present in Job dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Job' dropdown
     Then user verifies the value present in 'Job' dropdown
 
-    @SAM
+
   Scenario: Verify the options present in Organization dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Organization' dropdown
     Then user verifies the value present in 'Organization' dropdown
 
-    @SAM
+
   Scenario: Verify the options present in Qualifications dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Qualifications' dropdown
     Then user verifies the value present in 'Qualifications' dropdown
 
-    @SAM
+
   Scenario: Verify the options present in Configuration dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Configuration' dropdown
     Then user verifies the value present in 'Configuration' dropdown
+
+  @SAM
+  Scenario: Verify the functionality when user clicks help in Admin page
+    And user clicks on 'Admin' from left nav menu
+    When user clicks on Help button in Admin page
+    Then user verifies the redirection to new tab and verify it's components

@@ -36,6 +36,11 @@ public class DashboardPage {
     By deleteButton = By.xpath("(//button//i[contains(@class,'trash')])[last()]");
     By yesDeletePopUp = By.xpath("//div[contains(@class,'modal-footer')]//button[2]");
     By userManagementDropdown = By.xpath("//span[text()='User Management ']//following-sibling::ul//li//a");
+    By helpButton = By.xpath("//button[@title='Help']");
+    By searchFieldInNewTab = By.xpath("//input[@id='query']");
+
+    //PIM page components
+    By employmentStatusDropdown = By.xpath("//label[text()='Employment Status']/..//following-sibling::div//i");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -257,5 +262,34 @@ public class DashboardPage {
         }
         log.info("Actual text from Configuration dropdown is fetched");
         return options;
+    }
+
+    public void userClicksOnHelpButtonInAdminPage() throws Exception {
+        driver.findElement(helpButton).click();
+    }
+
+
+    public void userVerifiesTheRedirectionToNewTabAndVerifyItsComponents() throws Exception {
+        String originalWindow = driver.getWindowHandle();
+        new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.numberOfWindowsToBe(2));
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!windowHandle.equals(originalWindow)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
+        if (driver.getTitle().equals("How to Add a User Account – OrangeHRM")) {
+            new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(searchFieldInNewTab));
+            driver.findElement(searchFieldInNewTab).isDisplayed();
+            log.info("New tab has opened successfully after clicking Help and Search box is displayed");
+        } else {
+            log.info("Test failed and Incorrect page opened");
+        }
+        driver.switchTo().window(originalWindow);
+    }
+
+    public void userClickOnEmploymentStatus() throws Exception {
+        driver.findElement(employmentStatusDropdown).click();
+        log.info("Employment status dropdown is clicked");
     }
 }
