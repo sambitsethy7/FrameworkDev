@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.intuit.karate.core.ScenarioOutline;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import pages.DashboardPage;
 import utilities.ConfigReader;
 import utilities.DriverFactory;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -119,5 +121,63 @@ public class DashboardSteps {
     @Then("user deletes the record")
     public void userDeletesTheRecord() throws Exception {
         dashboardPage.deleteRecord();
+    }
+
+    @Then("user verifies the options present in top bar menu of Admin page")
+    public void userVerifiesTheOptionsPresentInTopBarMenuOfAdminPage() throws Exception {
+        List<String> expectedItems = Arrays.asList("User Management", "Job", "Organization", "Qualifications", "Nationalities", "Corporate Branding", "Configuration");
+        List<String> actualItems = dashboardPage.verifyOptionsPresentInTopBarMenuOfAdminPage();
+        Assert.assertTrue(actualItems.containsAll(expectedItems));
+    }
+
+    @Then("user verifies the table header content present in Admin page")
+    public void userVerifiesTheTableHeaderContentPresentInAdminPage() throws Exception {
+        List<String> expectedItems = Arrays.asList("Username", "User Role", "Employee Name", "Status", "Actions");
+        List<String> actualItems = dashboardPage.verifyTableHeaderContentPresentInAdminPage();
+        Assert.assertTrue(actualItems.containsAll(expectedItems));
+    }
+
+    @When("user clicks on {string} dropdown")
+    public void userClicksOnUserManagementDropdown(String value) throws Exception {
+        dashboardPage.userClicksOnDropdown(value);
+    }
+
+    @Then("user verifies the value present in {string} dropdown")
+    public void userVerifiesTheValuePresentInUserManagementDropdown(String value) throws Exception {
+        switch (value) {
+            case "User Management":
+                String expectedItem = "Users";
+                String actualItem = dashboardPage.verifyTheValuePresentInUserManagementDropdown();
+                Assert.assertEquals(expectedItem, actualItem);
+                break;
+
+            case "Job":
+                List<String> expectedItemsOfJob = Arrays.asList("Job Titles", "Pay Grades", "Employment Status", "Job Categories", "Work Shifts");
+                List<String> actualItemsOfJob = dashboardPage.verifyOptionsPresentInJobDropdown();
+                Assert.assertTrue(actualItemsOfJob.containsAll(expectedItemsOfJob));
+                break;
+
+            case "Organization":
+                List<String> expectedItemsOfOrg = Arrays.asList("General Information", "Locations", "Structure");
+                List<String> actualItemsOfOrg = dashboardPage.verifyOptionsPresentInOrgDropdown();
+                Assert.assertTrue(actualItemsOfOrg.containsAll(expectedItemsOfOrg));
+                break;
+
+            case "Qualifications":
+                List<String> expectedItemsOfQualifications = Arrays.asList("Skills", "Education", "Licenses", "Languages", "Memberships");
+                List<String> actualItemsOfQualifications = dashboardPage.verifyOptionsPresentInQualificationsDropdown();
+                Assert.assertTrue(actualItemsOfQualifications.containsAll(expectedItemsOfQualifications));
+                break;
+
+            case "Configuration":
+                List<String> expectedItemsOfConfig = Arrays.asList("Email Configuration", "Email Subscriptions", "Localization", "Language Packages", "Modules", "Social Media Authentication", "Register OAuth Client", "LDAP Configuration");
+                List<String> actualItemsOfConfig = dashboardPage.verifyOptionsPresentInConfigDropdown();
+                Assert.assertTrue(actualItemsOfConfig.containsAll(expectedItemsOfConfig));
+                break;
+
+            default:
+                System.out.println("No case matches");
+                break;
+        }
     }
 }

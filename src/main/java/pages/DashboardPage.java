@@ -35,7 +35,7 @@ public class DashboardPage {
     By saveButton = By.xpath("//button[@type='submit']");
     By deleteButton = By.xpath("(//button//i[contains(@class,'trash')])[last()]");
     By yesDeletePopUp = By.xpath("//div[contains(@class,'modal-footer')]//button[2]");
-//    By nextDeleteButton = By.xpath("(//div[@role='rowgroup']//button)[5]//i");
+    By userManagementDropdown = By.xpath("//span[text()='User Management ']//following-sibling::ul//li//a");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -187,5 +187,75 @@ public class DashboardPage {
         wait.until(ExpectedConditions.elementToBeClickable(yesDeletePopUp));
         driver.findElement(yesDeletePopUp).click();
         log.info("Record is deleted successfully");
+    }
+
+    public List<String> verifyOptionsPresentInTopBarMenuOfAdminPage() throws Exception {
+        List<WebElement> topBarMenuOptions = driver.findElements(By.xpath("//div[contains(@class,'topbar')]//nav//ul//li"));
+        List<String> actualTopBarMenuItems = new ArrayList<>();
+        for (WebElement topBarMenuOption : topBarMenuOptions) {
+            actualTopBarMenuItems.add(topBarMenuOption.getText());
+        }
+        log.info("Actual menu items are fetched successfully");
+        return actualTopBarMenuItems;
+    }
+
+    public List<String> verifyTableHeaderContentPresentInAdminPage() throws Exception {
+        List<WebElement> tableHeaderContents = driver.findElements(By.xpath("//div[@role='columnheader']"));
+        List<String> actualTableHeaderContents = new ArrayList<>();
+        for (int i = 1; i < tableHeaderContents.size(); i++) {
+            actualTableHeaderContents.add(tableHeaderContents.get(i).getText());
+        }
+        log.info("Actual table header contents are fetched successfully");
+        return actualTableHeaderContents;
+    }
+
+    public void userClicksOnDropdown(String value) throws Exception {
+        driver.findElement(By.xpath("//li//span[text()='" + value + " ']")).click();
+    }
+
+    public String verifyTheValuePresentInUserManagementDropdown() throws Exception {
+        String actualText = driver.findElement(userManagementDropdown).getText();
+        log.info("Actual text from User Management dropdown is fetched");
+        return actualText;
+    }
+
+    public List<String> verifyOptionsPresentInJobDropdown() throws Exception {
+        List<WebElement> actualItems = driver.findElements(By.xpath("//span[text()='Job ']//following-sibling::ul//li//a"));
+        List<String> options = new ArrayList<>();
+        for (WebElement actualItem : actualItems) {
+            options.add(actualItem.getText());
+        }
+        log.info("Actual text from Job dropdown is fetched");
+        return options;
+    }
+
+    public List<String> verifyOptionsPresentInOrgDropdown() throws Exception {
+        List<WebElement> actualItems = driver.findElements(By.xpath("//span[text()='Organization ']//following-sibling::ul//li//a"));
+        List<String> options = new ArrayList<>();
+        for (WebElement actualItem : actualItems) {
+            options.add(actualItem.getText());
+        }
+        log.info("Actual text from Organization dropdown is fetched");
+        return options;
+    }
+
+    public List<String> verifyOptionsPresentInQualificationsDropdown() throws Exception {
+        List<WebElement> actualItems = driver.findElements(By.xpath("//span[text()='Qualifications ']//following-sibling::ul//li//a"));
+        List<String> options = new ArrayList<>();
+        for (WebElement actualItem : actualItems) {
+            options.add(actualItem.getText());
+        }
+        log.info("Actual text from Qualifications dropdown is fetched");
+        return options;
+    }
+
+    public List<String> verifyOptionsPresentInConfigDropdown() throws Exception {
+        List<WebElement> actualItems = driver.findElements(By.xpath("//span[text()='Configuration ']//following-sibling::ul//li//a"));
+        List<String> options = new ArrayList<>();
+        for (WebElement actualItem : actualItems) {
+            options.add(actualItem.getText());
+        }
+        log.info("Actual text from Configuration dropdown is fetched");
+        return options;
     }
 }
