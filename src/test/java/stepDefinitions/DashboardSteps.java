@@ -25,7 +25,7 @@ public class DashboardSteps {
         List<String> expectedOptions = Arrays.asList("About", "Support", "Change", "Password", "Logout");
         List<String> actualOptions = dashboardPage.verifyOptionsPresentInUserDropdown();
         Boolean value = actualOptions.containsAll(expectedOptions);
-        if (true) {
+        if (value == true) {
             System.out.println("Test case PASSED");
         } else {
             System.out.println("Test Case FAILED");
@@ -197,6 +197,9 @@ public class DashboardSteps {
     }
 
     @Then("user verifies the options present in Employment Status")
-    public void userVerifiesTheOptionsPresentInEmploymentStatus() {
+    public void userVerifiesTheOptionsPresentInEmploymentStatus() throws Exception {
+        List<String> expectedItems = Arrays.asList("Freelance", "Full-Time Contract", "Full-Time Permanent", "Full-Time Probation", "Part-Time Contract", "Part-Time Internship");
+        List<String> actualItems = dashboardPage.verifyOptionsInEmploymentStatus();
+        Assert.assertTrue(actualItems.containsAll(expectedItems));
     }
 }

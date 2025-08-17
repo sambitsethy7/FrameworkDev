@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Slf4j
@@ -41,6 +42,7 @@ public class DashboardPage {
 
     //PIM page components
     By employmentStatusDropdown = By.xpath("//label[text()='Employment Status']/..//following-sibling::div//i");
+    By employeeStatusDropdownOptions = By.xpath("//label[text()='Employment Status']/..//following-sibling::div[@role='listbox' and @loading='false']");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -291,5 +293,14 @@ public class DashboardPage {
     public void userClickOnEmploymentStatus() throws Exception {
         driver.findElement(employmentStatusDropdown).click();
         log.info("Employment status dropdown is clicked");
+    }
+
+    public List<String> verifyOptionsInEmploymentStatus() throws Exception {
+        List<WebElement> options = driver.findElements(By.xpath("//label[text()='Employment Status']/..//div[@role='listbox']"));
+        List<String> values = new ArrayList<>();
+        for (WebElement option : options) {
+            values.add(option.getText());
+        }
+        return values;
     }
 }
