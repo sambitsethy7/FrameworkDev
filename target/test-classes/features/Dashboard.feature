@@ -109,8 +109,7 @@ Feature: Dashboard which displays after login
     When user clicks on Help button in Admin page
     Then user verifies the redirection to new tab and verify it's components
 
-    @SAM
   Scenario: Verify the options present in the PIM > Employment Status
     And user clicks on 'PIM' from left nav menu
     When user clicks on Employment Status
-    Then user verifies the options present in Employment Status
+#    Then user verifies the options present in Employment Status

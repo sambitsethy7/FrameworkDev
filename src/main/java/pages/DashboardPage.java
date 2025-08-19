@@ -16,6 +16,11 @@ public class DashboardPage {
     WebDriver driver;
     LoginPage loginPage;
 
+    public DashboardPage(WebDriver driver) {
+        this.driver = driver;
+        this.loginPage = new LoginPage(driver);
+    }
+
     By userDropdown = By.xpath("//li[contains(@class,'dropdown')]");
     By userDropdownMenu = By.xpath("//ul[@class='oxd-dropdown-menu']");
     By logoutOption = By.linkText("Logout");
@@ -42,12 +47,6 @@ public class DashboardPage {
 
     //PIM page components
     By employmentStatusDropdown = By.xpath("//label[text()='Employment Status']/..//following-sibling::div//i");
-    By employeeStatusDropdownOptions = By.xpath("//label[text()='Employment Status']/..//following-sibling::div[@role='listbox' and @loading='false']");
-
-    public DashboardPage(WebDriver driver) {
-        this.driver = driver;
-        this.loginPage = new LoginPage(driver);
-    }
 
     public List<String> verifyOptionsPresentInUserDropdown() throws Exception {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
@@ -16,6 +17,7 @@ import java.util.List;
 public class LoginPage {
     WebDriver driver;
 
+    By headerValue = By.xpath("//h6[text()='Dashboard']");
     By usernameField = By.xpath("//input[@placeholder='Username']");
     By passwordField = By.xpath("//input[@placeholder='Password']");
     By loginButton = By.xpath("//button[@type='submit']");
@@ -189,7 +191,11 @@ public class LoginPage {
         if (actualUsernameFieldErrorColor.equals(expectedFieldErrorColor) && actualPasswordFieldErrorColor.equals(expectedFieldErrorColor)) {
             log.info("Expected color is displayed");
         } else {
-            log.info("Expected color is not displaying " + actualUsernameFieldErrorColor);
+            log.info("Expected color is not displaying {}", actualUsernameFieldErrorColor);
         }
+    }
+
+    public String getHeaderValue() throws Exception {
+        return driver.findElement(headerValue).getText();
     }
 }
