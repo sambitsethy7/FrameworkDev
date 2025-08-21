@@ -4,7 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.*;
 
 @Slf4j
@@ -27,6 +30,9 @@ public class LeavePage {
     By includePastEmployeesLabel = By.xpath("//div[contains(@class,'leave')]//p[text()='Include Past Employees']");
     By resetButton = By.xpath("//button[@type='reset']");
     By searchButton = By.xpath("//button[text()=' Search ']");
+    By entitlementsDropdown = By.xpath("//li//span[text()='Entitlements ']");
+    By reportsDropdown = By.xpath("//li//span[text()='Reports ']");
+    By configureDropdown = By.xpath("//li//span[text()='Configure ']");
 
     public void verifyLandingPageOfLeave() throws Exception {
         driver.findElement(topHeader).isDisplayed();
@@ -45,5 +51,63 @@ public class LeavePage {
         driver.findElement(resetButton).isDisplayed();
         driver.findElement(searchButton).isDisplayed();
         log.info("All components are displayed successfully");
+    }
+
+    public void clickEntitlementsDropdown() throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(entitlementsDropdown)).click();
+        log.info("Entitlements dropdown is clicked");
+    }
+
+    public List<String> verifiesValueInEntitlementsDropdown() throws Exception {
+        List<WebElement> options = driver.findElements(By.xpath("//ul[@role='menu']//li"));
+        List<String> entitlementOptions = new ArrayList<>();
+        for (WebElement option : options) {
+            entitlementOptions.add(option.getText());
+        }
+        log.info("Values present in Entitlements dropdown are fetched");
+        return entitlementOptions;
+    }
+
+    public void clickReportsDropdown() throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(reportsDropdown)).click();
+        log.info("Reports dropdown is clicked");
+    }
+
+    public List<String> verifiesValueInReportsDropdown() throws Exception {
+        List<WebElement> options = driver.findElements(By.xpath("//ul[@role='menu']//li"));
+        List<String> reportOptions = new ArrayList<>();
+        for (WebElement option : options) {
+            reportOptions.add(option.getText());
+        }
+        log.info("Values present in Reports dropdown are fetched");
+        return reportOptions;
+    }
+
+    public void clickConfigureDropdown() throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(configureDropdown)).click();
+        log.info("Configure dropdown is clicked");
+    }
+
+    public List<String> verifiesValueInConfigureDropdown() throws Exception {
+        List<WebElement> options = driver.findElements(By.xpath("//ul[@role='menu']//li"));
+        List<String> configureOptions = new ArrayList<>();
+        for (WebElement option : options) {
+            configureOptions.add(option.getText());
+        }
+        log.info("Values from Configure dropdown are fetched");
+        return configureOptions;
+    }
+
+    public List<String> verifiesValueOfTableHeader() throws Exception {
+        List<WebElement> options = driver.findElements(By.xpath("//div[contains(@class,'table-header')]//div[@role='columnheader']"));
+        List<String> tableHeaderValues = new ArrayList<>();
+        for (int i = 1; i < options.size(); i++) {
+            tableHeaderValues.add(options.get(i).getText());
+        }
+        log.info("Values from result table headers are fetched");
+        return tableHeaderValues;
     }
 }
