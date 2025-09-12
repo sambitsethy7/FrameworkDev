@@ -23,6 +23,6 @@ Feature: Page which displays after clicking on Leave from left nav
     When user clicks on Configure dropdown
     Then user verifies the value present in Configure dropdown
 
-    @new
+
   Scenario: Verify the table's header values in Leave page
     Then user verifies the values of table header

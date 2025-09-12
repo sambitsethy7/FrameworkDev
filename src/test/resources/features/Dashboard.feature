@@ -74,6 +74,7 @@ Feature: Dashboard which displays after login
     Then user verifies the table header content present in Admin page
 
 
+    @fail
   Scenario: Verify the options present in User Management dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'User Management' dropdown
