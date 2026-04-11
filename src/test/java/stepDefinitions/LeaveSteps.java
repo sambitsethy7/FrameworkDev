@@ -55,7 +55,7 @@ public class LeaveSteps {
         Assert.assertEquals(expectedItems, actualItems);
     }
 
-    
+
     @Then("user verifies the values of table header")
     public void userVerifiesTheValuesOfTableHeader() throws Exception {
         List<String> actualItems = Arrays.asList("Date", "Employee Name", "Leave Type", "Leave Balance (Days)", "Number of Days", "Status", "Comments", "Actions");
