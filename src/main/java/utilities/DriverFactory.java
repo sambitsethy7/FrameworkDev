@@ -4,7 +4,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -29,7 +28,8 @@ public class DriverFactory {
                     break;
 
                 case "edge":
-                    WebDriverManager.edgedriver().setup();
+//                    WebDriverManager.edgedriver().setup();
+                    System.setProperty("webdriver.edge.driver","drivers/msedgedriver146.exe");
                     driver = new EdgeDriver();
                     break;
 

@@ -34,16 +34,17 @@ Feature: OrangeHRM Login
     Then user verifies the components present in reset password page
 
 
+    @links
   Scenario: Verify the broken links present in Login page
     Given user is on the OrangeHRM login page
     Then i verify all links present in login page
 
-
+    @images
   Scenario: Verify the broken images present in Login page
     Given user is on the OrangeHRM login page
     Then i verify all images present in login page
 
-
+    @uspwd
   Scenario: Verify the username and password mentioned in Login page
     Given user is on the OrangeHRM login page
     Then i verify the username and password mentioned in login page

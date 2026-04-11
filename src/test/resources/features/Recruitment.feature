@@ -10,5 +10,5 @@ Feature: Page which displays after clicking recruitment from left nav
     @new
   Scenario: Verify the labels present in Recruitment page
     Then user verifies the components present in Recruitment page
-      But verify the options present in user dropdown
+      And verify the options present in user dropdown
       And user clicks on logout option

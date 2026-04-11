@@ -20,12 +20,12 @@ public class DashboardSteps {
     WebDriver driver = DriverFactory.getDriver();
     DashboardPage dashboardPage = new DashboardPage(driver);
 
-    @Then("verify the options present in user dropdown")
+    @And("verify the options present in user dropdown")
     public void verifyTheOptionsPresentInUserDropdown() throws Exception {
         List<String> expectedOptions = Arrays.asList("About", "Support", "Change", "Password", "Logout");
         List<String> actualOptions = dashboardPage.verifyOptionsPresentInUserDropdown();
-        Boolean value = actualOptions.containsAll(expectedOptions);
-        if (value == true) {
+        boolean val = actualOptions.containsAll(expectedOptions);
+        if (val) {
             System.out.println("Test case PASSED");
         } else {
             System.out.println("Test Case FAILED");
