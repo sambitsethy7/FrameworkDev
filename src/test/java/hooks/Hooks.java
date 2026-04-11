@@ -16,6 +16,7 @@ public class Hooks {
     @BeforeAll
     public static void setupExtent() {
         ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ExtentReport.html");
+        spark.config().setOfflineMode(true);
         extent = new ExtentReports();
         extent.attachReporter(spark);
     }
