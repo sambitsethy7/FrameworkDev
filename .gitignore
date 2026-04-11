@@ -1,0 +1,13 @@
+#Maven
+target/
+
+#Logs
+*.log
+
+#IntelliJ
+.idea/
+*.iml
+
+#Reports
+test-output/
+CucumberTestReport/
