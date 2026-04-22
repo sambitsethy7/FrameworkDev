@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         plugin = {"pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "html:target/cucumber-reports/CucumberTestReport.html",
-                "rerun:target/failed_scenarios.txt"},
+        },
+//                "rerun:target/failed_scenarios.txt",
         monochrome = true
 )
 public class TestRunner {
