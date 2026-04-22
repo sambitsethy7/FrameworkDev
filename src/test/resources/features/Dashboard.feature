@@ -6,18 +6,21 @@ Feature: Dashboard which displays after login
     When user clicks the login button
     Then user should see the OrangeHRM dashboard
 
+  @Sambit
   Scenario: Verify the options present in user dropdown
     Then verify the options present in user dropdown
 
-    @Sambit
+  @Sambit
   Scenario: User logouts from application
     When verify the options present in user dropdown
     Then user clicks on logout option
     And user is on the OrangeHRM login page
 
+  @Sambit
   Scenario: Verify the images present in dashboard page
     Then i verify all images present in dashboard page
 
+  @Sambit
   Scenario: Verify the links present in dashboard page
     Then i verify all links present in dashboard page
 
@@ -39,20 +42,25 @@ Feature: Dashboard which displays after login
       | clai    | Claim       |
       | buz     | Buzz        |
 
+  @Sambit
   Scenario: Verify the options present in Left navigation
     Then user should see correct navigation menu options
 
+  @Sambit
   Scenario: Verify the headers of each section in dashboard
     Then user gets all the headers of each section in dashboard
 
+  @Sambit
   Scenario: Verify the number of records found in Admin page by default
     When user clicks on 'Admin' from left nav menu
     Then user verifies the number of records found by default in Admin
 
+  @Sambit
   Scenario: Verify the dropdown is multiselect or not in Admin page
     When user clicks on 'Admin' from left nav menu
     Then user verifies the dropdown is multiselect or not in Admin page
 
+  @Sambit
   Scenario: Verify user is able to add in Admin > User Management page
     When user clicks on 'Admin' from left nav menu
     And user clicks on Add button in System users
