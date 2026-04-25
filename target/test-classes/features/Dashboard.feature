@@ -24,6 +24,7 @@ Feature: Dashboard which displays after login
   Scenario: Verify the links present in dashboard page
     Then i verify all links present in dashboard page
 
+    @SambitS
   Scenario Outline: Left navigation search validation
     When user enters "<text>" in the search box
     Then "<value>" option should be visible
@@ -60,7 +61,7 @@ Feature: Dashboard which displays after login
     When user clicks on 'Admin' from left nav menu
     Then user verifies the dropdown is multiselect or not in Admin page
 
-  @SambitS
+  @Sambit
   Scenario: Verify user is able to add in Admin > User Management page
     When user clicks on 'Admin' from left nav menu
     And user clicks on Add button in System users
@@ -68,50 +69,59 @@ Feature: Dashboard which displays after login
     Then user clicks on Save button in Add User page
     And user redirects to System users page
 
+  @Sambit
   Scenario: Verify the delete functionality in User management page
     And user clicks on 'Admin' from left nav menu
     When user clicks on delete icon from existing records
     Then user deletes the record
 
+  @Sambit
   Scenario: Verify the options present in top bar menu of Admin page
     And user clicks on 'Admin' from left nav menu
     Then user verifies the options present in top bar menu of Admin page
 
-
+  @Sambit
   Scenario: Verify the table header present in Admin page
     And user clicks on 'Admin' from left nav menu
     Then user verifies the table header content present in Admin page
 
+  @Sambit
   Scenario: Verify the options present in User Management dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'User Management' dropdown
     Then user verifies the value present in 'User Management' dropdown
 
+  @Sambit
   Scenario: Verify the options present in Job dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Job' dropdown
     Then user verifies the value present in 'Job' dropdown
 
+  @Sambit
   Scenario: Verify the options present in Organization dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Organization' dropdown
     Then user verifies the value present in 'Organization' dropdown
 
+  @Sambit
   Scenario: Verify the options present in Qualifications dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Qualifications' dropdown
     Then user verifies the value present in 'Qualifications' dropdown
 
+  @Sambit
   Scenario: Verify the options present in Configuration dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Configuration' dropdown
     Then user verifies the value present in 'Configuration' dropdown
 
+  @Sambit
   Scenario: Verify the functionality when user clicks help in Admin page
     And user clicks on 'Admin' from left nav menu
     When user clicks on Help button in Admin page
     Then user verifies the redirection to new tab and verify it's components
 
+  @Sambit
   Scenario: Verify the options present in the PIM > Employment Status
     And user clicks on 'PIM' from left nav menu
     When user clicks on Employment Status
