@@ -102,8 +102,7 @@ Feature: Dashboard which displays after login
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Organization' dropdown
     Then user verifies the value present in 'Organization' dropdown
-
-  @Sambit
+    
   Scenario: Verify the options present in Qualifications dropdown in Admin page header
     And user clicks on 'Admin' from left nav menu
     When user clicks on 'Qualifications' dropdown
